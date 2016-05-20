@@ -1,5 +1,5 @@
 <div ng-controller="Main as vm">
-	<div ui-view class="container">
+	<!-- <div ui-view class="container">
 		<p>
 		   Testing Woop Woop
 		</p>
@@ -7,5 +7,15 @@
             <div id="lg-map"></div>
             <div class="lg-map-text"></div>
         </div>
+	</div> -->
+	<div ui-view class="container">
+
+	  <!-- Map html - add the below to your page -->
+	  <div class="lg-map-wrapper" data-map="lg-map/usa.js">
+		<div id="lg-map"></div>
+		<div class="lg-map-text"></div>
+	  </div>
+	  <!-- End Map html -->
+
 	</div>
 </div>
