@@ -49,7 +49,6 @@
   app.run(['$rootScope', '$state', '$stateParams', 'Products', 'Votes', 'Money', 'bio',
     function ($rootScope, $state, $stateParams, Products, Votes, Money, bio) {
       $rootScope.$on('$stateChangeStart', function (event, toState, toStateParams) {
-        // track the state the user wants to go to; authorization service needs this
         $rootScope.toState = toState
         $rootScope.toStateParams = toStateParams
       })
