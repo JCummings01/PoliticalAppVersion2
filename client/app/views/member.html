@@ -1,0 +1,37 @@
+<div ng-controller="Account as vm">
+
+    <div class="well">
+        <img src="https://s3.amazonaws.com/assets.opensecrets.org/politicians/img/{{candidateId}}.jpg">
+        <h2 class="namerep"> {{bio.fullName}} </h2>
+        <p class="repinfo"><strong>Party</strong> {{bio.party}} </p>
+        <p class="repinfo"><strong>Started their term </strong> {{bio.termStart}} </p>
+        <p class="repinfo"><strong>Birthday</strong> {{bio.birthday}} </p>
+        <p class="repinfo"><strong>Phone</strong> {{bio.phone}} </p>
+        <p class="repinfo"><strong>Website</strong> {{bio.website}} </p>
+        <p class="repinfo"><strong>Contact Form</strong> {{bio.contactForm}} </p>
+        <p class="repinfo"><strong>Fax</strong> {{bio.fax}} </p>
+        <p class="repinfo"><strong>VoteSmart ID</strong> {{bio.voteSmartId}} </p>
+        <p class="repinfo"><strong>Candidate ID</strong> {{bio.uniqueId}} </p>
+    </div>
+
+    <!-- //- h3 Campaign Contributions
+    //- ul(ng-repeat= "money in moneys")
+    //-   li  Industry: {{money.industry_name}}
+    //-   li  Individual Contributions: {{money.indivs}}
+    //-   li  PAC Contributions: {{money.pacs}}
+    //-   li  Total {{money.industry_name}} Contributions: {{money.total}} -->
+
+    <nvd3 options='options' data="data"></nvd3>
+
+    <h3 class="sponsoredbills"> Sponsored Bills </h3>
+    <ul ng-repeat= "bill in bills">
+        <div class="well">
+            <p class="repinfo"><strong>Bill ID</strong> {{bill.BillId}} </p>
+            <p class="repinfo"><strong>Chamber</strong> {{bill.Chamber}} </p>
+            <p class="repinfo"><strong>Introduced On</strong> {{bill.IntroducedOn}} </p>
+            <p class="repinfo"><strong>Official Title</strong> {{bill.OfficialTitle}} </p>
+            <a class="btn.btn-default" ng-href="{{bill.Info}}", role="button"> Read more about this Bill </a>
+            <a class="btn.btn-default"> See More Bills </a>
+        </div>
+    </ul>
+</div>

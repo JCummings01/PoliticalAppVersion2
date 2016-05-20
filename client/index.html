@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="PoliticalApp">
+<head>
+
+    <title>Political App</title>
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/lib/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="/lib/ngDialog/css/ngDialog.css" />
+    <link rel="stylesheet" href="/lib/ngDialog/css/ngDialog-theme-default.css" />
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/.tmp/styles.css">
+    <link rel="stylesheet" href="/app/styles/main.css">
+    <link rel="stylesheet" href="/app/styles/nv.d3.min.css">
+    <link rel="stylesheet" href="/app/views/lg-map/map.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display+SC|Six+Caps|Open+Sans:400,300|Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+    <!-- endinject -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script src="/app/views/lg-map/raphael.js" type="text/javascript"></script>
+    <script src="/app/views/lg-map/scale.raphael.js" type="text/javascript"></script>
+    <script src="/app/views/lg-map/lg-map.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <base href="/" />
+    <div ng-include="'app/views/main.html'"></div>
+
+    <!-- bower:js -->
+    <script src="/lib/es5-shim/es5-shim.js"></script>
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/angular-animate/angular-animate.js"></script>
+    <script src="/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/lib/angular-file-upload/angular-file-upload.js"></script>
+    <script src="/lib/angular-route/angular-route.js"></script>
+    <script src="/lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/lib/ngDialog/js/ngDialog.js"></script>
+    <!-- endbower -->
+
+    <!-- inject:js -->
+    <script src="/app/app.js"></script>
+    <script src="/app/controllers/main2.controller.js"></script>
+    <script src="/app/controllers/repdata.controller.js"></script>
+    <script src="/app/controllers/summary.controller.js"></script>
+    <script src="/app/services/products.factory.js"></script>
+    <script src="/app/services/bio.factory.js"></script>
+    <script src="/app/services/money.factory.js"></script>
+    <script src="/app/services/votes.factory.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.js"></script>
+    <!-- <script src="/angular-nvd3.js"></script> -->
+
+    <!-- endinject -->
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

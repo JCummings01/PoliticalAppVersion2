@@ -1,0 +1,92 @@
+<div class="container" id="my-products">
+	<h3 class="my-products-title">Products you own:</h3>
+	<div ng-repeat="product in vm.user.products" id="user-products">
+		<div class="product">
+			<section class="row product-info">
+				<div class="col-md-2">
+					<img src="http://placehold.it/150x150" alt="{{product.name}}"> {{product.name}}
+				</div>
+				<div class="col-md-10">
+					<table class="table">
+						<thead>
+							<th>Order #</th>
+							<th>Status</th>
+							<th>Date Bought</th>
+							<th>Price</th>
+							<th>Serial Code</th>
+						</thead>
+						<tbody>
+							<td>{{product.order}}</td>
+							<td>{{product.status}}</td>
+							<td>{{product.date}}</td>
+							<td>{{product.price}}</td>
+							<td>{{product.serial}}</td>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!-- PRODUCT EXPANSIONS -->
+			<section class="row product-expansions">
+			<div ng-if="">{{product.name}}</div>
+				<div ng-show="product.name === 'Signal'">
+					<div class="col-md-2 col-md-offset-2">
+				<div class="product-subtitle"><span>Expansions</span></div>
+				</div>
+				<div class="col-md-8">
+				<div ng-repeat="expansion in vm.signalExpansions" class="expansion-row-container">
+					<div><img src="http://placehold.it/30x30" alt="{{expansion.name}}"></div>
+					<div>{{expansion.name}}</div>
+					<div><a ng-hide="vm.audio.isPlaying" ng-click="vm.hearDemo(expansion)">Hear Demo</a><a ng-show="vm.audio.isPlaying" ng-click="vm.stopDemo()">Stop Demo</a></div>
+				<div ng-if="">{{expansion}}</div>
+				<div ng-show="expansion.status === 'Not Purchased'"><a href="{{expansion.purchase_url}}">Buy Now</a></div>
+				<div ng-show="expansion.status === 'Purchased'"><a href="/download/{{update.bucket_id}}">Download Now</a></div>
+			</div>
+			</div>
+			</div>
+		<div ng-if="">{{product.name}}</div>
+			<div ng-show="product.name === 'REV'">
+		<div class="col-md-2 col-md-offset-2">
+				<div class="product-subtitle"><span>Expansions</span></div>
+		</div>
+			<div class="col-md-8">
+				<div ng-repeat="expansion in vm.revExpansions" class="expansion-row-container">
+					<div><img src="http://placehold.it/30x30" alt="{{expansion.name}}"></div>
+					<div>{{expansion.name}}</div>
+					<div><a ng-hide="vm.audio.isPlaying" ng-click="vm.hearDemo(expansion)">Hear Demo</a><a ng-show="vm.audio.isPlaying" ng-click="vm.stopDemo()">Stop Demo</a></div>
+				<div ng-if="">{{expansion}}</div>
+					<div ng-show="expansion.status === 'Not Purchased'"><a href="{{expansion.purchase_url}}">Buy Now</a></div>
+					<div ng-show="expansion.status === 'Purchased'"><a href="/download/{{update.bucket_id}}">Download Now</a></div>
+				</div>
+			</div>
+			</div>
+			<!-- PRODUCT UPDATES -->
+		<div ng-if="">{{product.name}}</div>
+				<div ng-show="product.name === 'REV'">
+		<div class="col-md-2 col-md-offset-2">
+				<div class="product-subtitle"><span>Updates</span></div>
+			</div>
+				<div class="col-md-8">
+				<div ng-repeat="update in vm.revUpdates" class="product-row-container">
+						<div>{{update.version}}</div>
+						<div id="detail"><a ng-click="vm.clickToOpen(update)">Details...</a></div>
+						<div><a href="/download/{{update.bucket_id}}">Download Now</a></div>
+				</div>
+				</div>
+				</div>
+			<div ng-if="">{{product.name}}</div>
+				<div ng-show="product.name === 'Signal'">
+			<div class="col-md-2 col-md-offset-2">
+					<div class="product-subtitle"><span>Updates</span></div>
+					</div>
+				<div class="col-md-8">
+				<div ng-repeat="update in vm.signalUpdates" class="product-row-container">
+						<div>{{update.version}}</div>
+						<div class="detail"><a ng-click="vm.clickToOpen(update)">Details...</a></div>
+						<div><a href="/download/{{update.bucket_id}}">Download Now</a></div>
+				</div>
+				</div>
+			</section>
+			</div>
+		</div>
+	</div>
+</div>
