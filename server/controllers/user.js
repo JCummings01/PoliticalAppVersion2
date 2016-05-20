@@ -1,4 +1,3 @@
-var superagent = require('superagent')
 var request = require('request')
 // var RepBio = require('../models/bio.js')
 var apiKey = '51aa68c0c15797ab67f347add9f9d73a'
