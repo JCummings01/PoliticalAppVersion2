@@ -2,7 +2,7 @@
   var app = angular.module('PoliticalApp', ['ngRoute', 'ui.bootstrap', 'toastr', 'ui.router', 'ngDialog'])
 
   app.config(function ($urlRouterProvider, $stateProvider) {
-    $urlRouterProvider.otherwise('/map')
+    $urlRouterProvider.otherwise('/home')
 
     $stateProvider
       .state('/home', {
