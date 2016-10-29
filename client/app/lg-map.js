@@ -191,7 +191,7 @@ $(function () {
             if (config.useText) {
               textArea.html(paths[id].text)
             } else {
-              window.open(paths[id].url, config.hrefTarget)
+              window.open(paths[id].url, config.hrefTarget) // NOTE: Here is where the url data comes in
             }
           }
         })

@@ -17,7 +17,7 @@
         url: '/map',
         views: {
           'content@': {
-            templateUrl: '/app/views/map.html'
+            templateUrl: '/app/views/main.html'
           }
         }
       })

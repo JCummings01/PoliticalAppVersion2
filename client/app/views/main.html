@@ -1,6 +1,11 @@
 <div ng-controller="Main as vm">
-	<!-- <header></header> -->
 	<section id="main-content">
-		<main ui-view="content"></main>
+		<main ui-view="content">
+			<div class="state-list" ng-repeat="state in vm.stateList">
+				<div class="state" ng-click="vm.stateSelect(state.abbrev)">
+					{{state.state}}
+				</div>
+			</div>
+		</main>
 	</section>
 </div>
